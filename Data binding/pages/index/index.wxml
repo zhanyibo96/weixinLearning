@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<!--
+  框架最大的特点就是让我们开发者必须按照特定的方式编写
+-->
+<!--
+  1.数据在哪里（当前页面对象的data属性中）
+  2.数据绑到哪（想绑定到哪就在哪里用用mustache输出）
+-->
+<view class="container">
+<!--这种{{}}的语法叫做mustache-->
+<text>{{ message }}</text>
+<text>{{ person.name }}</text>
+<!--mustache语法可以用在
+    1.innerHTML(类似)
+    2.元素的属性上
+    不能用在标签名和属性名上面
+    -->
+<view class="{{viewClassName}}"> </view>
+<text>{{ 100<50 ? "你对了":"你错了" }}</text>
+<!--
+  当语法解析误解了true/false
+  可以用{{}}解决
+-->
+<checkbox checked="{{ false }}"></checkbox>
+<!--列表数据渲染-->
+
+<view>
+  <!-- <view>
+    <view>
+      <checkbox></checkbox>
+      <text>JavaScript</text>
+    </view>
+  </view>
+
+  
+  <view>
+    <view>
+      <checkbox checked="{{ true }}"></checkbox>
+      <text>HTML</text>
+    </view>
+  </view>
+
+  
+  <view>
+    <view>
+      <checkbox></checkbox>
+      <text>CSS</text>
+    </view>
+  </view> -->
+
+<!--
+  1.明确页面结构的循环体
+  2.删除多余的重复内容,只保留一个
+  3.在剩下的这个上加上wx:for属性，属性值等于我们遍历的数据源，
+  数据源必须是一个数组
+  4.在这个标签内部使用item代表当前被遍历的元素
+-->
+  <view wx:for="{{todos}}" >
+  <text>{{index}}</text>
+      <checkbox checked="{{ item.completed }}"></checkbox>
+      <text>{{ item.name }}</text>
+      <!--如果全局属性中有item这种关键词-->
+    </view>
+
+  </view>
+
+</view>
+

@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+<view class="item">
+  <button class="title" bindtap="toggle">
+    <text>切换面板展示</text>
+  </button>
+  <!-- block 只是控制属性(wx:)的载体，页面渲染过程中没有实际意义 -->
+  <block >
+  <view class="content"  wx:if="{{!show}}"> 
+    <text>
+      张一波
+      周逸南
+      迟洪亮
+      董宇豪
+    </text>
+  </view>
+  <view class="content" hidden="{{show}}"> 
+    <text>
+      张一波
+      周逸南
+      迟洪亮
+      董宇豪
+    </text>
+  </view>
+  </block>
+</view>
+</view>
