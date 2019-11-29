@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Flex Demo 2</title>-->
+    <!--<style>-->
+        <!--.content{-->
+            <!--width: 400px;-->
+            <!--height: 300px;-->
+            <!--border: 1px solid #000;-->
+            <!--font-size: 0;-->
+        <!--}-->
+        <!--.item{-->
+            <!--width: 25%;-->
+            <!--display: inline-block;-->
+            <!--height: 200px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="content">-->
+    <!--<div class="item" style="background-color: #ff0"></div>-->
+    <!--<div class="item" style="background-color: #f00"></div>-->
+    <!--<div class="item" style="background-color: #f0f"></div>-->
+    <!--<div class="item" style="background-color: #0ff"></div>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flex Demo 2</title>
+    <style>
+        .content{
+            display: flex;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            font-size: 0;
+        }
+        .item{
+            flex: 1;
+        }
+        /*总的是4份，每一项占一份*/
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="item" style="background-color: #ff0"></div>
+    <div class="item" style="background-color: #f00"></div>
+    <div class="item" style="background-color: #f0f"></div>
+    <div class="item" style="background-color: #0ff"></div>
+</div>
+
+</body>
+</html>
