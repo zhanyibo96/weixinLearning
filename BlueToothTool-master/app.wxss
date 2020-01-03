@@ -10,7 +10,7 @@
   min-height: 100%;
   display:flex;
   flex-direction:column;/*垂直显示，正如一个列一样,row就是水平显示*/
-  justify-content: center;/* center水平居中 align-items:center;垂直居中*/
+  /* justify-content: center;center水平居中 align-items:center;垂直居中 */
   font-size: 32rpx;
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }

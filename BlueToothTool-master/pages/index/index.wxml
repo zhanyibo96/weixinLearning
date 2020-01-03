@@ -11,20 +11,17 @@
 
 <view class='page-body'>
   <view class='log'>
-    <view>展示log日志(可滑动查看)：</view>
+    <view>当前设备信息：</view>
     <view>
       <scroll-view scroll-y="true" class='text-box scroll-list'>
         <text>{{textLog}}</text>
       </scroll-view>
     </view>
   </view>
-  <view class='scan-view'>
-    <button type="primary" bindtap="startClear">清空log日志</button>
-    <button type="primary" bindtap="startScan">扫描蓝牙设备</button>
-  </view>
 
-  <view class="devices_summary">已发现 {{devices.length}} 个外围设备：</view>
-  <scroll-view class="device_list" scroll-y scroll-with-animation>
+
+  <view class="devices_summary">已发现 {{devices.length}} 个蓝牙设备：</view>
+  <scroll-view class="device_list" scroll-y="true" scroll-with-animation>
     <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" bindtap="createBLEConnection" class="device_item" hover-class="device_item_hover">
       <view style="font-size: 16px; color: #333;">{{item.name}}</view>
       <view style="font-size: 10px">信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
@@ -32,6 +29,8 @@
       <view style="font-size: 10px">Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
     </view>
   </scroll-view>
-
-  <image class='about-img' src='../../images/about.png' bindtap='aboutClick'></image>
+  <view class='scan-view'>
+    <!-- <button type="primary" bindtap="startClear">清空log日志</button> -->
+    <button type="primary" bindtap="startScan">扫描蓝牙设备</button>
+  </view>
 </view>

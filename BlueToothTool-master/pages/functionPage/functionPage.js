@@ -166,9 +166,10 @@ Page({
     var that = this;
     wx.onBLECharacteristicValueChange(function (res) {
       var resValue = utils.ab2hext(res.value); //16进制字符串
-      var resValueStr = utils.hexToString(resValue);
+
+      // var resValueStr = utils.hexToString(resValue);
   
-      var log0 = that.data.textLog + "成功获取：" + resValueStr + "\n";
+      var log0 = that.data.textLog + "成功获取：" + resValue + "\n";
       that.setData({
         textLog: log0,
       });

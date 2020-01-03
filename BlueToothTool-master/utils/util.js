@@ -10,10 +10,6 @@ function stringToBytes(str) {
     else {
       strArray[index] |= (str.charCodeAt(i) - 48);
       index++;
-      console.log("str.charCodeAt(i):" + str.charCodeAt(i));
-      console.log("i:" + i/2);
-      var x = strArray[i / 2];
-      console.log("strArray[i / 2]:" + (str.charCodeAt(i) - 48));
     }
     
   }
@@ -40,10 +36,13 @@ function ab2hext(buffer) {
 //16进制字符串转10进制字符串
 function hexToString(str) {
   var trimedStr = str.trim();
+  //trim()方法去除字符串的头尾空格
   var rawStr =
     trimedStr.substr(0, 2).toLowerCase() === "0x" ?
       trimedStr.substr(2) :
       trimedStr;
+      //substr(start,length) 方法可在字符串中抽取从 start 下标开始的指定数目的字符,length为start开始的长度。
+      //=== 要求类型相同，若类型不同则返回false
   var len = rawStr.length;
   if (len % 2 !== 0) {
     // alert("Illegal Format ASCII Code!");
@@ -52,10 +51,13 @@ function hexToString(str) {
   var curCharCode;
   var resultStr = [];
   for (var i = 0; i < len; i = i + 2) {
-    curCharCode = parseInt(rawStr.substr(i, 2), 16); // ASCII Code Value
+    curCharCode = parseInt(rawStr.substr(i, 2), 16); 
+    //parseInt() 函数可解析一个字符串，并返回一个整数。
     resultStr.push(String.fromCharCode(curCharCode));
+    //16进制转换成 ASCII Code Value 
   }
   return resultStr.join("");
+  //join() 方法用于把数组中的所有元素放入一个字符串。
 }
 
 /*微信app版本比较*/
