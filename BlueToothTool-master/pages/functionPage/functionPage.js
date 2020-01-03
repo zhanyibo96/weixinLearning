@@ -187,6 +187,7 @@ Page({
     var that = this; 
     var orderStr = that.data.orderInputStr;//指令
     let order = utils.stringToBytes(orderStr);
+    console.log(order);
     that.writeBLECharacteristicValue(order);
   },
 

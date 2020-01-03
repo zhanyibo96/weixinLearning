@@ -1,12 +1,29 @@
-// 字符串转byte
+// 10进制字符串转byte(ascii码)
 function stringToBytes(str) {
-  var strArray = new Uint8Array(str.length);
+  var strArray = new Uint8Array(str.length/2);
+  var index=0;
   for (var i = 0; i < str.length; i++) {
-    strArray[i] = str.charCodeAt(i);
+    
+    if (0 == (i % 2)) {
+      strArray[index] = (str.charCodeAt(i) - 48) << 4;
+    }
+    else {
+      strArray[index] |= (str.charCodeAt(i) - 48);
+      index++;
+      console.log("str.charCodeAt(i):" + str.charCodeAt(i));
+      console.log("i:" + i/2);
+      var x = strArray[i / 2];
+      console.log("strArray[i / 2]:" + (str.charCodeAt(i) - 48));
+    }
+    
   }
-  const array = new Uint8Array(strArray.length)
-  strArray.forEach((item, index) => array[index] = item)
-  return array.buffer;
+ 
+  // const array = new Uint8Array(strArray.length)
+  // strArray.forEach(
+  //   function (item, index) {
+  //   array[index] = item;
+  //   })
+  return strArray.buffer;
 }
 
 // ArrayBuffer转16进制字符串示例
@@ -20,7 +37,7 @@ function ab2hext(buffer) {
   return hexArr.join('');
 }
 
-//16进制转字符串
+//16进制字符串转10进制字符串
 function hexToString(str) {
   var trimedStr = str.trim();
   var rawStr =
