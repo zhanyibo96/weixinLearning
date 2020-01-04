@@ -2,14 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/functionPage/functionPage"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333333",
-    "navigationBarTitleText": "小程序蓝牙调试工具",
+    "navigationBarTitleText": "RFID读写器蓝牙连接",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#F8F8F8"
   },
-
   "sitemapLocation": "sitemap.json"
 }

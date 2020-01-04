@@ -4,9 +4,10 @@
   left: 5%;
   position: relative;
   margin-top: 40rpx;
+  margin-bottom: 40rpx;
 }
 .scroll-list {
-  max-height: 300rpx;
+height: 250rpx;
 }
 
 .scan-view {
@@ -34,10 +35,10 @@ width: 48%;
   font-size: 13px;
 }
 .device_list {
-  height: 400rpx;
+  height: 500rpx;
   margin: 20px 5%;
   margin-top: 0;
-  border: 1px solid black;
+  border: 1px solid #888888;
   border-radius: 5px;
   width: auto;
 }

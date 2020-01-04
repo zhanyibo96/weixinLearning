@@ -1,24 +1,32 @@
 /* pages/funtionPage/functionPage.wxss */
 
+
 .bluetooth-detail {
-    width: 95%;
-    margin: 0 auto;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #ddd;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
 }
 .card {
   border-radius: 10rpx;
-  background-color: #fff;
-  margin: 20rpx;
+  background-color: #fff; 
+  margin-top: 50rpx;
   padding: 20rpx;
-  box-shadow: 0 2rpx 4rpx rgba(0,0,0,.3);
+  box-shadow: 0 2rpx 4rpx#FDF5E6;
 }
 .text-box list{
-    white-space: normal;
+  height: 700rpx;
 }
 .list {
   max-height: 45vh;
+}
+
+.foot{
+  width: 100%;
+	position: absolute;
+	bottom: 17%;
+  font-size: 16rpx;
 }
 
 .function-input{
@@ -31,43 +39,58 @@
   justify-content: space-between;
   margin: 0rpx 10%; 
 }
+.function-input image{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
 
+.function-button-div {
+	width: 80%;
+	position: absolute;
+  font-size: 16rpx;
+
+}
+.send{
+  font-size:26rpx;
+}
 .input{
   border: 1rpx solid #666;
   width: 400rpx;
-  padding: 20rpx 10rpx;
+  padding: 7rpx 10rpx;
+  text-indent:10px;
   font-size: 32rpx;
-}
-.function-button-div {
-	width: 100%;
-	position: absolute;
-	bottom: 6%;
-  font-size: 16rpx;
-}
-.function-button-div1 {
-	width: 100%;
-	position: relative;
 }
 .function-button-div2 {
 	width: 100%;
 	position: relative;
 	top: 20px;	
+  bottom: 6%;
 }
 /*左边的功能按钮*/
 .function-button_left {
-	width: 40%;
-	height: 44px;
-	/*border: 1px solid #f0ad4e;
-	background-color: #f0ad4e;*/
-	float: left;
-	left: 6%;
+  position:relative;
+  display:block;
+  float: left;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:15px;
+  left: 6%;
+  width: 35%;
 }
 /*右边的功能按钮*/
 .function-button_right {
-	width: 40%;
-	height: 44px;
-	/*border: 1px solid #f0ad4e;
-	background-color: #f0ad4e;*/
-	float: left;
-	left: 14%;
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:15px;
+  left: 10%;
+  width: 35%;
 }
